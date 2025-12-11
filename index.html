@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Fran</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div>
+  <h1>Bienvenido a la página</h1>
+</div>
+<nav>
+  <ul>
+    <a href = "Bd/horario.html">Horario</a>
+    <a href = "Bd/insertar.html">Insertar</a>
+    <a href = "Bd/actualizar.html">Actualizar</a>
+    <a href = "Bd/borrar.html">Borrar</a>
+  </ul>
+</nav>
+<div id="Cuerpo">
+  <script>
+    (function() {
+      const container = document.getElementById('Cuerpo');
+      if (!container) return;
+      const now = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      const formatted = new Intl.DateTimeFormat('es-ES', options).format(now);
+      const text = formatted.charAt(0).toUpperCase() + formatted.slice(1);
+      container.textContent = text;
+      textcolor = "rgb(162, 161, 161)";
+      container.style.color = textcolor;
+      tectAllign = "center";
+      container.style.textAlign = tectAllign;
+    })();
+  </script>
+  <h3>ÚLTIMAS NOTICIAS</h3>
+  <p>Aquí irán las últimas noticias.</p>
+</div>
+
+</body>
+</html>
